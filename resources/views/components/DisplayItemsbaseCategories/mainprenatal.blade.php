@@ -1,0 +1,11 @@
+@extends('layout.app')
+    @section('content')
+{{View::make('components/DisplayData/DisplayMainCategories')->with('categories',$categories)->with('countcartitems',$countcartitems)->with('coll',$coll)->with('categoryc',$categoryc)->with('itemforcategory',$itemforcategory)->with('categorychild',$categorychild)}}
+{{View::make('components/DisplayData/categorysubcategorydesktoppopup')->with('coll',$coll)->with('categoryc',$categoryc)->with('itemforcategory',$itemforcategory)}} 
+{{View::make('components/DisplayData/categoriessubcategorieslink')->with('categorygg',$categorygg)->with('categoryg',$categoryg)->with('categoryparent',$categoryparent)->with('categorychild',$categorychild)->with('items',$items)}}
+{{View::make('components/FilterData/filterdesktop')->with('categorychild',$categorychild)->with('genere',$genere)->with('marche',$marche)->with('colore',$colore)}}
+{{View::make('components/FilterData/filtermobile')->with('categorychild',$categorychild)->with('genere',$genere)->with('marche',$marche)->with('colore',$colore)}}
+  {{View::make('components/DisplayItemsbaseCategories/DisplayItemsbaseCategory')->with('categorychild',$categorychild)->with('items',$items)->with('itemc',$itemc)->with('images',$images)->with('itemc',$itemc)}}
+    <x-email/>
+    {{View::make('components/DisplayData/unorderlist')->with('categorieslimit',$categorieslimit)}}
+    <x-footer/>
